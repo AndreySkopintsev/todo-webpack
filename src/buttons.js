@@ -1,4 +1,6 @@
-
+import defaultList from './defaultList'
+import todayList from './todayList'
+import weekList from './weekList'
 
 function inboxBtn(){
     const section = document.querySelector('section')
@@ -6,7 +8,8 @@ function inboxBtn(){
     button.setAttribute('id','inboxBtn')
     button.textContent = 'Inbox'
     button.addEventListener('click',()=>{
-        section.style.background = 'red'
+        section.innerHTML = ''
+        section.appendChild(defaultList())
     })
     
     return button
@@ -17,7 +20,8 @@ function todayBtn(){
     const button = document.createElement('button')
     button.textContent = 'Today'
     button.addEventListener('click',()=>{
-        section.style.background = 'blue'
+        section.innerHTML = ''
+        section.appendChild(todayList())
     })
     
     return button
@@ -28,7 +32,8 @@ function weekBtn(){
     const button = document.createElement('button')
     button.textContent = 'This week'
     button.addEventListener('click',()=>{
-        section.style.background = 'green'
+        section.innerHTML = ''
+        section.appendChild(weekList())
     })
     
     return button
