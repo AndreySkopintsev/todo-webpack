@@ -80,6 +80,15 @@ aside{
     width: 100%;
 }
 
+.inputBox{
+    display: block;
+}
+
+
+.hidden{
+    display: none;
+}
+
 .projectsBox{
     padding: 30px 0;
     display: flex;
